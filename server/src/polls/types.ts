@@ -14,3 +14,16 @@ export type RejoinPollFields = {
   userId: string;
   name: string;
 };
+
+export type CreatePollData = {
+  pollId: string;
+  topic: string;
+  votesPerVoter: number;
+  userId: string;
+};
+
+export type AddParticipantData = {
+  pollId: string;
+  userId: string;
+  name: string;
+};
