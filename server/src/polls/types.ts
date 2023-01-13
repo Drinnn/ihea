@@ -27,3 +27,11 @@ export type AddParticipantData = {
   userId: string;
   name: string;
 };
+
+type AuthPayload = {
+  userId: string;
+  pollId: string;
+  name: string;
+};
+
+export type RequestWithAuth = Request & AuthPayload;

@@ -97,14 +97,14 @@ export class PollsRepository {
 
     try {
       await this.redisClient.send_command(
-        'JSON_SET',
+        'JSON.SET',
         key,
         participantPath,
         JSON.stringify(name),
       );
 
       const pollJSON = await this.redisClient.send_command(
-        'JSON_GET',
+        'JSON.GET',
         key,
         '.',
       );
